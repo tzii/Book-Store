@@ -3,7 +3,7 @@ import Book from "./components/Book";
 
 export default function App() {
 	return (
-		<div>
+        <div>
 			<Book />
 		</div>
 	);
