@@ -1,0 +1,36 @@
+#login-page {
+    background-color: var(--bg-login);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+.form {
+    width: 450px;
+}
+.form input[type="text"],
+.form input[type="password"] {
+    margin-top: 10px;
+    width: 100%;
+    height: 56px;
+    border-radius: 20px;
+    border: 1px solid #000;
+    padding: 0 20px;
+}
+.form .option {
+    display: flex;
+    font-size: 12px;
+    justify-content: space-between;
+}
+.form button[type="submit"] {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 56px;
+    background-color: #242b4e;
+    box-shadow: 0 5px 5px rgba(121, 125, 123, 55);
+    border-radius: 20px;
+}
+.form button[type="button"] {
+    float: right;
+}

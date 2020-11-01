@@ -1,0 +1,31 @@
+:root {
+    --bg-login: #e6ecf0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--gray-6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    /* font-family: Raleway; */
+    border: none;
+    color: var(--gray-6);
+    cursor: pointer;
+}
+input:focus,
+button:focus {
+    outline: none;
+}
+
+#root {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+}
