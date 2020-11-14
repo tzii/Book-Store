@@ -1,0 +1,32 @@
+.page--item {
+	width: 30px;
+	height: 30px;
+	font-weight: bold;
+
+	background-color: transparent;
+	color: var(--primary-color);
+	border: 2px solid var(--primary-color);
+	border-radius: 15px;
+}
+
+.page--item:hover:not(:disabled) {
+	background-color: var(--primary-color);
+	color: white;
+}
+
+.page--item:active {
+	outline: none !important;
+}
+
+.page--item + .page--item {
+	margin-left: 0.5rem;
+}
+.page--item:disabled {
+	opacity: 0.5;
+	cursor: default;
+}
+
+.page--next:disabled,
+.page--prev:disabled {
+	opacity: 0;
+}

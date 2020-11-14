@@ -1,0 +1,103 @@
+.admin-product {
+	width: 8.5rem;
+	margin: 0;
+	padding: 0.2rem;
+
+	border: 1px solid var(--bg-light);
+	border-radius: 5px;
+	box-shadow: 0 2px 2px var(--shadow-color);
+	position: relative;
+	height: 17rem;
+}
+
+.product--image {
+	position: absolute;
+	width: 8rem;
+	display: block;
+}
+
+.product--image--contains {
+	position: relative;
+	width: 8rem;
+	height: 12rem;
+}
+
+.product--info > * {
+	margin: 0;
+	padding: 0;
+}
+
+.product--title {
+	font-size: 0.8rem;
+	font-weight: bold;
+
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+
+	height: 2.4rem;
+}
+.product--count,
+.product--category {
+	font-size: 0.7rem;
+}
+
+.product-action {
+	flex-direction: column;
+	position: absolute;
+
+	top: 0;
+	right: -1rem;
+
+	cursor: pointer;
+	display: none;
+}
+
+.admin-product:hover .product-action {
+	display: flex;
+}
+
+.button {
+	border-radius: 1rem;
+	width: 2rem;
+	height: 2rem;
+
+	text-align: center;
+	padding-top: 2px;
+	color: rgba(255, 255, 255, 0.795);
+	transition: transform 0.15s linear;
+}
+
+.button:hover {
+	transform: scale(1.1);
+}
+
+.button__edit {
+	padding-left: 4px;
+	background-color: var(--my-yellow);
+}
+
+.button__edit:hover {
+	box-shadow: 0 0 10px var(--my-yellow);
+}
+
+.button__delete {
+	background-color: var(--my-red);
+}
+
+.button__delete:hover {
+	box-shadow: 0 0 10px var(--my-red);
+}
+
+.button__detail {
+	background-color: var(--my-green);
+}
+
+.button__detail:hover {
+	box-shadow: 0 0 10px var(--my-green);
+}
+
+.button > i {
+	pointer-events: none;
+}
