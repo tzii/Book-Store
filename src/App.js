@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { connect } from "react-redux";
 import { Switch, Route, Redirect } from "react-router-dom";
@@ -12,13 +12,15 @@ import UserPage from "./pages/UserPage";
 import BookDetailPage from "./pages/BookDetailPage";
 import CartPage from "./pages/CartPage";
 import HighLightPage from "./pages/HighLightPage";
+import AdminPage from "./pages/Admin";
+import Loading from "./components/Loading";
 
 export const App = ({ user }) => {
     return (
-        <>
+        <Suspense fallback={<Loading />}>
             <Switch>
                 <Route path="/login" component={LoginPage} />
-                {/* <Route path="/admin" component={NotFoundPage} /> */}
+                <Route path="/admin" component={AdminPage} />
                 <Route>
                     <Container fluid>
                         <Row>
@@ -75,7 +77,7 @@ export const App = ({ user }) => {
                     <Footer />
                 </Route>
             </Switch>
-        </>
+        </Suspense>
     );
 };
 

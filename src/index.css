@@ -1,25 +1,34 @@
 :root {
-    --bg-login: #e6ecf0;
+	--bg-login: #e6ecf0;
+	--bg-light: #dfe6e9;
+	--shadow-color: #f4f5f6;
+	--primary-color: #2d3436;
+	--secondary-color: #0984e3;
+	--purple: #bd93f9;
+	--my-blue: #0985e3ea;
+	--my-red: #d63030de;
+	--my-yellow: #f5c56dde;
+	--my-green: #00b893d8;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--gray-6);
+	font-family: Arial, Helvetica, sans-serif;
+	color: var(--gray-6);
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 button {
-    /* font-family: Raleway; */
-    border: none;
-    color: var(--gray-6);
-    cursor: pointer;
+	/* font-family: Raleway; */
+	border: none;
+	color: var(--gray-6);
+	cursor: pointer;
 }
 input:focus,
 button:focus {
-    outline: none;
+	outline: none;
 }

@@ -1,0 +1,140 @@
+.nav {
+	margin: 0 !important;
+	width: 100vw;
+	padding: 0.5rem;
+
+	box-shadow: 0 2px 2px var(--bg-light);
+}
+
+.nav--logo {
+	height: 2rem;
+}
+
+.nav-links {
+	height: 2rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav-item {
+	position: relative;
+	display: block;
+	text-decoration: none;
+	font-weight: bold;
+	color: var(--primary-color);
+
+	overflow: hidden;
+}
+
+.nav-item + .nav-item {
+	margin-left: 2rem;
+}
+
+.nav-item::after {
+	content: "";
+	display: none;
+
+	display: block;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+
+	width: 0;
+	height: 2.5px;
+
+	background-color: var(--secondary-color);
+
+	transition: all 0.2s linear;
+}
+
+.nav-item.active,
+.nav-item:hover {
+	text-decoration: none;
+	color: var(--secondary-color);
+}
+
+.nav-item.active::after,
+.nav-item:not(.active):hover::after {
+	display: block;
+	width: 100%;
+	left: 0;
+}
+
+.hamburger {
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+
+	position: relative;
+	cursor: pointer;
+}
+.hamburger :nth-child(n) {
+	width: 2rem;
+	height: 4px;
+	margin-top: 5px;
+	background-color: var(--primary-color);
+
+	transition: transform 0.2s linear;
+}
+
+.drop-down {
+	cursor: pointer;
+	position: relative;
+}
+
+@media (max-width: 768px) {
+	.nav-links {
+		overflow: hidden;
+
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		height: 0;
+
+		transition: all 0.2s linear;
+	}
+
+	.nav-links.active {
+		height: 190px;
+	}
+
+	.nav-item + .nav-item {
+		margin-left: 0;
+		margin-top: 1rem;
+	}
+
+	.hamburger {
+		display: flex;
+	}
+
+	.hamburger.active {
+		margin-top: 5px;
+	}
+
+	.hamburger.active :nth-child(n) {
+		position: absolute;
+		transition: all 0.2s linear;
+	}
+
+	.hamburger.active :nth-child(1) {
+		transform: rotate(-135deg);
+	}
+
+	.hamburger.active :nth-child(2) {
+		transform: translateX(-9px);
+		/* opacity: 0; */
+		width: 50px;
+		height: 50px;
+
+		border: 3px solid var(--primary-color);
+		border-radius: 25px;
+		background-color: transparent;
+	}
+
+	.hamburger.active :nth-child(3) {
+		transform: rotate(135deg);
+	}
+}

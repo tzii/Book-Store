@@ -1,0 +1,73 @@
+.card {
+	width: 18.75rem;
+	padding: 0.5rem 1rem;
+	display: inline-block;
+
+	cursor: pointer;
+	transition: transform 0.15s linear;
+}
+
+.card:hover {
+	transform: scale(1.03);
+	transition: transform 0.15s linear;
+}
+
+.card > * {
+	pointer-events: none;
+}
+
+.card--logo img {
+	width: 2.5rem;
+}
+
+.card.blue {
+	border-left: 4px solid var(--blue);
+}
+
+.card.blue:hover {
+	box-shadow: 0 0 10px var(--blue);
+}
+
+.card.blue .card__title {
+	color: var(--blue);
+}
+
+.card.red {
+	border-left: 4px solid var(--red);
+}
+
+.card.red:hover {
+	box-shadow: 0 0 10px var(--red);
+}
+
+.card.red .card__title {
+	color: var(--red);
+}
+
+.card.yellow {
+	border-left: 4px solid var(--yellow);
+}
+
+.card.yellow:hover {
+	box-shadow: 0 0 10px var(--yellow);
+}
+
+.card.yellow .card__title {
+	color: var(--yellow);
+}
+
+.card.green {
+	border-left: 4px solid var(--green);
+}
+
+.card.green:hover {
+	box-shadow: 0 0 10px var(--green);
+}
+
+.card.green .card__title {
+	color: var(--green);
+}
+
+.card__content {
+	font-weight: bold;
+}

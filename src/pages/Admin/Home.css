@@ -1,0 +1,8 @@
+.home--cards {
+	display: grid;
+
+	grid-template-columns: repeat(auto-fit, min(18.75rem, 100%));
+	grid-gap: 1.5rem;
+
+	justify-content: center;
+}

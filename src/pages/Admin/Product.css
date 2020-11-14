@@ -1,0 +1,19 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.product {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.product--items {
+	display: grid;
+
+	grid-template-columns: repeat(auto-fit, min(8.5rem, 100%));
+	grid-gap: 1.5rem;
+
+	justify-content: center;
+}
