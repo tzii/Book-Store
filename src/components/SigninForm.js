@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import { connect } from "react-redux";
 import { getSession } from "../api";
 import { signin } from "../store/userSlice";
-import "./SigninForm.css";
 
 export const SigninForm = ({ setForm, signin }) => {
     const { register, handleSubmit } = useForm();

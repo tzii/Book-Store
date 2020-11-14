@@ -23,9 +23,3 @@ input:focus,
 button:focus {
     outline: none;
 }
-
-#root {
-    display: flex;
-    flex-wrap: wrap;
-    height: 100vh;
-}

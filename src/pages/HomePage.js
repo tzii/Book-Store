@@ -1,11 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Col, Container, Row } from "react-bootstrap";
+import Header from "../components/Header";
 
 export default function HomePage() {
-    return (
-        <div>
-            <p>homepage</p>
-            <Link to="/login">Login</Link>
-        </div>
-    );
+    return <h1>Homepage</h1>;
 }
