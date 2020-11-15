@@ -1,7 +1,20 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import Header from "../components/Header";
+import CategoryNav from "../components/CategoryNav";
+import ListBooks from "../components/ListBooks";
+import Banner from "../images/banner.png";
 
 export default function HomePage() {
-    return <h1>Homepage</h1>;
+    return (
+        <>
+            <img src={Banner} alt="" style={{ width: "100%" }} />
+            <section className="highlight">
+                <h2>Sách nổi bật</h2>
+                <ListBooks />
+            </section>
+            <section className="category">
+                <CategoryNav />
+                <ListBooks />
+            </section>
+        </>
+    );
 }

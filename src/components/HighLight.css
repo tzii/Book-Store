@@ -1,0 +1,22 @@
+.highlight-book {
+    display: flex;
+}
+.highlight-book > img {
+    object-fit: contain;
+}
+.highlight-book > .highlight-info {
+    display: flex;
+    flex-direction: column;
+}
+.highlight-book > .highlight-info > .info-name {
+    font-size: 12px;
+}
+.highlight-book > .highlight-info > .writer {
+    font-size: 9px;
+}
+.highlight-book > .highlight-info > .rating {
+    flex: 1;
+}
+.highlight-book > .highlight-info > .description {
+    font-size: 9px;
+}
