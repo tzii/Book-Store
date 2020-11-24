@@ -1,0 +1,12 @@
+.category-nav > * {
+    display: inline;
+    margin-right: 10px;
+}
+.category-nav > p {
+    color: var(--black-1);
+    cursor: pointer;
+}
+.category-nav > p:hover,
+.category-nav > p.active {
+    text-decoration: underline;
+}

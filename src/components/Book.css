@@ -1,0 +1,34 @@
+.book {
+    display: flex;
+}
+.book > img {
+    object-fit: contain;
+    width: 40%;
+    cursor: pointer;
+}
+.book > .book-info {
+    display: flex;
+    flex-direction: column;
+}
+.book-info > .book-name {
+    font-size: 20px;
+    cursor: pointer;
+}
+.book-info > .writer {
+    font-size: 12px;
+}
+.book-info > .rating {
+}
+.book-info > .price {
+    flex: 1;
+    color: var(--red-1);
+    font-size: 15px;
+}
+.book-info > .book-btn {
+    display: flex;
+    justify-content: space-between;
+}
+.book-btn > *:nth-child(1) {
+}
+.book-btn > *:nth-child(2) {
+}

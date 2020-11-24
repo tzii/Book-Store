@@ -1,5 +1,12 @@
 :root {
     --black-1: #242a4b;
+    --gray-0: #fafafb;
+    --gray-1: #e6ecf0;
+    --gray-2: #d0d6da;
+    --gray-3: #aeb5b9;
+    --red-1: #ff6207;
+    --blue-0: #a4c8e8;
+    --blue-1: #2e90e5;
     --bg-login: #e6ecf0;
     --bg-light: #dfe6e9;
     --shadow-color: #f4f5f6;

@@ -1,21 +1,18 @@
 import React, { useState } from "react";
 import MoreBtn from "./MoreBtn";
-import "./CategoryNav.css";
+import "./HighLightNav.css";
 
-export default function CategoryNav({
+export default function HighLightNav({
     titles = [
-        "Văn học",
-        "Kinh tế",
-        "Tâm lí - Kĩ năng sống",
-        "Sách thiếu nhi",
-        "Sách giáo khoa - Tham khảo",
+        "Sách bán chạy hàng trong tuần",
+        "Sách bán chạy trong tháng",
+        "Sách bán chạy của năm",
     ],
 }) {
     const [currentTitle, setTitle] = useState(titles[0]);
 
     return (
-        <div className="category-nav">
-            <h6>Danh mục</h6>
+        <div className="highlight-nav">
             {titles.map((title) => (
                 <p
                     className={currentTitle === title ? "active" : ""}
@@ -24,7 +21,6 @@ export default function CategoryNav({
                     {title}
                 </p>
             ))}
-            <MoreBtn to="category" />
         </div>
     );
 }

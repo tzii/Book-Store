@@ -1,0 +1,63 @@
+.book-detail {
+    display: flex;
+}
+.book-detail > img {
+    object-fit: contain;
+    width: 200px;
+    margin-right: 20px;
+}
+.book-detail > .book-info {
+    display: flex;
+    flex-direction: column;
+}
+.book-detail > .book-info > .rating {
+    flex: 1;
+}
+.book-detail > .book-info > h4 > span {
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: normal;
+}
+.book-detail > .book-info > .book-info-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.book-detail > .book-info > .book-info-2 > :nth-child(2n + 1) {
+    font-weight: bold;
+}
+.book-detail > .book-info > .book-info-2 > .price {
+    font-size: 20px;
+    color: var(--red-1);
+    font-weight: bold;
+}
+.book-detail > .book-info > .book-info-2 > .book-count {
+    display: flex;
+}
+.book-detail > .book-info > .book-info-2 > .book-count > * {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: var(--gray-1);
+    text-align: center;
+    line-height: 30px;
+    user-select: none;
+}
+.book-detail > .book-info > .book-info-2 > .book-count > .minus {
+    border-radius: 5px 0 0 5px;
+    cursor: pointer;
+}
+.book-detail > .book-info > .book-info-2 > .book-count > .count {
+    width: 50px;
+}
+.book-detail > .book-info > .book-info-2 > .book-count > .plus {
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+.book-detail > .book-info > .book-info-2 > .book-count > .minus:hover,
+.book-detail > .book-info > .book-info-2 > .book-count > .plus:hover {
+    background-color: var(--gray-2);
+}
+.book-detail > .book-info > .book-info-2 > .book-count > .minus:active,
+.book-detail > .book-info > .book-info-2 > .book-count > .plus:active {
+    background-color: var(--gray-3);
+}

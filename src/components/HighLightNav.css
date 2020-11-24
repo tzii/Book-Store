@@ -1,0 +1,10 @@
+.highlight-nav > p {
+    display: inline;
+    margin-right: 30px;
+    color: var(--black-1);
+    cursor: pointer;
+}
+.highlight-nav > p:hover,
+.highlight-nav > p.active {
+    text-decoration: underline;
+}

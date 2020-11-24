@@ -1,8 +1,0 @@
-.right-bar > .user {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-.right-bar > .user > *:nth-child(2) {
-    padding: 0;
-}

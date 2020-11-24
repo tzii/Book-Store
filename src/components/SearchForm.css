@@ -1,0 +1,16 @@
+#search-form {
+    position: relative;
+}
+#search-form input {
+    background-color: var(--gray-1);
+    width: 100%;
+    padding: 14px 25px 14px 50px;
+    border: none;
+    border-radius: 100px;
+}
+#search-form img {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translate(0, -50%);
+}

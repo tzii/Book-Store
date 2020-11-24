@@ -17,8 +17,10 @@ import HighLightPage from "./pages/HighLightPage";
 import Loading from "./components/Loading";
 import RightBar from "./components/RightBar";
 import Footer from "./components/Footer";
+import NavBar from "./components/NavBar";
 import Header from "./components/Header";
-import SearchForm from "./components/SearchForm";
+
+import "./App.css";
 
 export const App = ({ user }) => {
     return (
@@ -29,10 +31,21 @@ export const App = ({ user }) => {
                 </Route>
                 <Route path="/admin" component={AdminPage} />
                 <Route>
-                    <Container fluid className="mt-4">
+                    <Route
+                        path={[
+                            "/",
+                            "/highlight",
+                            "/category",
+                            "/search/:id?",
+                            "/book/:id?",
+                        ]}
+                    >
+                        <Header />
+                    </Route>
+                    <Container fluid>
                         <Row>
                             <Col xs={2}>
-                                <Header />
+                                <NavBar />
                             </Col>
                             <Switch>
                                 <Route path={["/user", "/cart"]}>
@@ -52,12 +65,11 @@ export const App = ({ user }) => {
                                         "/",
                                         "/highlight",
                                         "/category",
-                                        "/search",
-                                        "/book",
+                                        "/search/:id?",
+                                        "/book/:id?",
                                     ]}
                                 >
-                                    <Col xs={8}>
-                                        <SearchForm />
+                                    <Col xs={8} className="px-5">
                                         <Switch>
                                             <Route
                                                 exact
@@ -77,7 +89,7 @@ export const App = ({ user }) => {
                                                 component={SearchPage}
                                             />
                                             <Route
-                                                path="/book"
+                                                path="/book/:id?"
                                                 component={BookDetailPage}
                                             />
                                             <Route

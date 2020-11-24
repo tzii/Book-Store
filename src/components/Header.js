@@ -1,44 +1,36 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import HomeIcon from "../images/home.svg";
-import WhatHot from "../images/whathot.svg";
-import Category from "../images/category.svg";
 import Glass from "../images/magnifying-glass.svg";
 import Logo from "../images/Logo@2x.png";
+import Img from "../images/avatar.jpg";
+import { Avatar, Badge, IconButton } from "@material-ui/core";
 import "./Header.css";
+import { Link } from "react-router-dom";
 
 export default function Header() {
     return (
-        <header>
-            <img src={Logo} />
-            <nav>
-                <ul>
-                    <li>
-                        <NavLink to="/" exact>
-                            <img src={HomeIcon} />
-                            <span>Trang Chủ</span>
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/highlight">
-                            <img src={WhatHot} />
-                            <span>Nổi Bật</span>
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/category">
-                            <img src={Category} />
-                            <span>Danh Mục</span>
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/search">
-                            <img src={Glass} />
-                            <span>Khám Phá </span>
-                        </NavLink>
-                    </li>
-                </ul>
-            </nav>
+        <header className="mt-2 shadow-sm">
+            <div className="brand">
+                <img src={Logo} alt="" />
+            </div>
+            <div className="search">
+                <form id="search-form">
+                    <input
+                        type="text"
+                        placeholder="Tìm cuốn sách mà bạn yêu thích ..."
+                    />
+                    <img src={Glass} alt="" />
+                </form>
+            </div>
+            <div className="user">
+                <Link className="mr-2 cart-icon" to="/cart">
+                    <Badge badgeContent={4} color="secondary">
+                        <i className="far fa-shopping-cart"></i>
+                    </Badge>
+                </Link>
+                <IconButton className="mr-2">
+                    <Avatar src={Img} />
+                </IconButton>
+            </div>
         </header>
     );
 }

@@ -1,18 +1,7 @@
 .more-btn {
-    float: right;
     background-color: transparent;
-    position: relative;
+    color: var(--black-1);
 }
-.more-btn::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--black-1);
-    transition: 0.2s;
-}
-.more-btn:hover::after {
-    width: 100%;
+.more-btn:hover {
+    color: var(--black-1);
 }
